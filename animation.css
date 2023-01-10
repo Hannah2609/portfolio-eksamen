@@ -1,0 +1,38 @@
+
+.progress {
+  animation-name: progress;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  transform-origin: left;
+}
+
+@keyframes progress {
+   0% {
+    transform: scaleX(0);
+   }
+
+    100% {
+    transform: scaleX(1);
+
+  }
+}
+
+
+@keyframes forward {
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000 0;
+    -webkit-text-stroke: 1.5px blue;
+  }
+}
+
+.hide{
+  display: none;
+}
+.show { 
+  font-display: block;
+}

@@ -1,0 +1,596 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "hind";
+  src: url("../font/hind/Hind-Regular.ttf");
+}
+body {
+  max-width: 100vw;
+  background-color: #f6f6f6;
+  font-family: "hind";
+  margin: 0 40px 0;
+}
+
+h2,
+h3,
+h1,
+a {
+  font-family: "montserrat";
+}
+h1 {
+  font-size: 60px;
+  margin-bottom: 100px;
+  margin-left: 0px;
+  padding-left: 0;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  
+}
+h2 {
+  font-size: 15px;
+  color: black;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+h3 {
+    color: #1400ff;
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+img {
+    max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+}
+a::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1400ff;
+  transition: width 0.4s;
+}
+a:hover::after {
+  width: 60%;
+}
+a:hover {
+  color: #1400ff;
+}
+
+/* NAV */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+li {
+  padding: 1em;
+}
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #707070;
+}
+.aktuel a {
+  color: #000;
+}
+.aktuel a:hover {
+  color: #1400ff;
+}
+.logo {
+  width: 40px;
+}
+
+/* Forside */
+
+#body_index #section_1 h1 {
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 900;
+  letter-spacing: -7px;
+  font-size: 150px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  background-image: url(../img/background_text.png);  
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-clip: text;
+  background-clip: text;
+  overflow: hidden;
+  background-position: -1000px 0;
+  animation: forward 15s linear infinite;
+}
+
+#section_1 .overskrift h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#section_1 p {
+    font-size: 17px;
+    margin-left: 10px;
+}
+.boks_links a {
+   border: solid 1.5px #1400ff;
+   padding: 10px;
+   margin-right: 4%;
+   margin-left: 10px;
+}
+.boks_links {
+    margin-top: 20px;
+}
+.boks_links a:hover {
+border:solid 1.5px #1400ff;
+}
+
+.boks_links a:hover::after {
+  width: 0%;
+}
+@media (max-width:800px) {
+ #body_index #section_1 h1 {
+  font-size: 100px;
+ }  
+  #section_1 .overskrift h2 {
+  font-size: 20px;
+ }  
+ #section_1 p {
+  font-size: 15px;
+ }
+ #section_1 .boks_links a {
+   border: solid 1.5px #1400ff;
+   padding: 7px;
+   margin-right: 4%;
+   margin-left: 10px;
+}
+}
+@media (max-width:600px) {
+#section_1 .boks_links {
+display: grid;
+row-gap: 1em;
+}
+#body_index #section_1 h1 {
+  font-size: 70px;
+  margin-bottom: 40px;
+ }  
+}
+/*  */
+
+/* portfolio */
+.h1_portfolio {
+    margin-left: 25px;
+}
+#temaer h2 {
+  margin-bottom: 40px;
+}
+h4 {
+  font-family: "montserrat";
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 35px;
+  color: #1400ff;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+.tema_1,
+.tema_2,
+.tema_3,
+.tema_4,
+.tema_5,
+.tema_6 {
+  border: solid 1.5px #1400ff;
+  padding: 10px;
+}
+#temaer img {
+  max-width: 100%;
+}
+
+/* overlay hoover effekt */
+.overlay_container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: black;
+  transition: opacity 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.overlay_link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.overlay_container:hover .overlay {
+  opacity: 0.8;
+}
+.overlay_container:hover .overlay_link {
+  opacity: 1;
+  color: white;
+}
+
+/*  */
+/*  */
+
+/* OM MIG */
+.h3_mindre {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+/* Info_boks */
+.info_boks {
+  border: solid 1.5px #1400ff;
+  padding: 30px;
+  padding-bottom: 0;
+}
+.profil_billede {
+  max-width: 100%;
+}
+.info_boks ul img {
+  max-width: 30px;
+  height: 100%;
+  padding-right: 20px;
+}
+ul {
+  padding: 0;
+}
+.info_boks li {
+  text-decoration: none;
+  padding-left: 0;
+}
+.info_boks p {
+  font-family: "montserrat";
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+/*  */
+
+
+
+
+/* CV */
+.årstal {
+  font-weight: 600;
+}
+.cv_boks ul {
+  border-left: solid 2px #1400ff;
+
+}
+/*  */
+
+/* SKILLS */
+.skills h2 {
+  margin: 0;
+  text-align: left;
+}
+
+/* progress bar */
+.progress_html_container {
+  width: 90%;
+  height: 20%;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid #1400ff;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#progress_html_sprite {
+  width: 80%;
+  height: 100%;
+  transform-origin: left;
+  background-color: #1400ff;
+  border-radius: 5px;
+}
+
+.progress_css_container {
+  width: 90%;
+  height: 20%;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid #1400ff;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#progress_css_sprite {
+  width: 70%;
+  height: 100%;
+  transform-origin: left;
+  background-color: #1400ff;
+  border-radius: 5px;
+}
+
+.progress_js_container {
+  width: 90%;
+  height: 20%;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid #1400ff;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#progress_js_sprite {
+  width: 35%;
+  height: 100%;
+  transform-origin: left;
+  background-color: #1400ff;
+  border-radius: 5px;
+}
+/*  */
+/*  */
+
+
+/* tema 1 */
+ #tema_1 .boks_links a {
+    margin-left: 0;
+ }
+/*  */
+
+
+
+/* Tema 2 */
+#tema .tekst_2, .tekst_3 {
+ background-color: #f6f6f6;
+ padding: 0;
+ margin-bottom: 80px;
+ margin-left: 0;
+}
+
+#tema .boks_links {
+    padding-top: 20px;
+}
+ #tema .boks_links a {
+    margin-left: 0;
+ }
+#tema .billede_1 img {
+    max-width: 100%;
+}
+.process_emnesite {
+    margin-bottom: 80px;
+    border: solid 1.5px #707070;
+    padding: 20px;
+}
+.process_emnesite img:hover {
+    transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+.wireframes_emnesite_container {
+    background-color: #e3e3e3;
+    padding: 80px;
+}
+.wireframes_emnesite_container img:hover {
+    transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+.process_emnesite p, .wireframes_emnesite_container p {
+    font-size: 12px;
+    font-family: "montserrat";
+    text-transform: uppercase;
+    font-weight: 400;
+}
+@media (max-width:900px) {
+#tema .tekst_1 p {
+    border-bottom: solid 1.5px #1400ff;
+    padding-bottom: 30px;
+}  
+.process_emnesite {
+  margin-top: 40px;
+}
+.wireframes_emnesite_container {
+  padding: 10px;
+}
+}
+
+
+
+/* tema 3 */
+#tema .tekst_1, .tekst_2, .tekst_3, .tekst_4, .tekst_5 {
+ padding: 0;
+ margin-bottom: 10px;
+ margin-left: 0;    
+}
+
+#tema .billede_1, .billede_2, .billede_3 {
+     margin-bottom: 80px;
+}
+
+.billede_3_container {
+    background-color: #e3e3e3;
+    
+}
+.billede_3_container img:hover {
+    transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+.billede_3_container p, .billede_2 p {
+    font-size: 12px;
+    font-family: "montserrat";
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width:900px) {
+.billede_3_container {
+   margin-top: 40px;
+   margin-bottom: 40px;
+}  
+}
+/*  */
+
+/* Tema 4 */
+#tema h2 {
+    margin-bottom: 20px;
+}
+.tekst_1_1 p{
+  border-bottom: 0;
+    margin-bottom: 20px;
+}
+.billede_2_diagrammer {
+    padding: 40px;
+    background-color: #e3e3e3;
+    margin-bottom: 80px;
+}
+.state_machine img {
+    background-color: white;
+}
+.billede_2_diagrammer img:hover {
+    transform: scale(1.5);
+  transition: transform 0.2s ease-in-out;
+}
+.skitser_container {
+    border: solid 1.5px #707070;
+}
+@media (max-width:900px) {
+.tekst_1_2 p{
+  border-bottom: solid 1.5px #1400ff;
+    margin-bottom: 40px;
+}
+}
+/*  */
+
+
+/* Tema 5 */
+.proces_container {
+  padding: 40px;
+  background-color:#e3e3e3;
+}
+
+.proces_container img:hover {
+    transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+/* video */
+
+video {
+  max-width: 100%;
+}
+
+#video_container {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  line-height: 0;
+  position: relative;
+}
+
+#volume_container {
+  position: absolute;
+  left: 97%;
+  bottom: 2%;
+  width: 40%;
+}
+.slider {
+  appearance: none;
+  width: 100%; 
+  height: 5px; 
+    transform: rotate(-90deg);
+  transform-origin: left bottom;
+  background: #f7f7f7; 
+  outline: none; 
+  opacity: 0.4; 
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slider:hover {
+  opacity: 1; 
+}
+
+#controls {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+#play,
+#pause {
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 6%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  padding: 2px;
+  padding-top: 20px;
+}
+#play {
+  background-image: url("../img/play.png");
+}
+#pause {
+  background-image: url("../img/pause.png");
+}
+/*  */
+
+
+/* tema 6 */
+.proces_portfolio {
+  background-color:#e3e3e3;
+  padding: 20px;
+}
+.proces_portfolio img:hover {
+ transform: scale(1.2);
+transition: transform 0.2s ease-in-out;
+}
+.wireframes_portfolio_container {
+  padding: 20px;
+  border: solid 1.5px #1400ff;
+}
+.wireframes_portfolio img {
+  border: solid 1px #e3e3e3;
+}
+.wireframes_portfolio img:hover {
+ transform: scale(1.2);
+transition: transform 0.2s ease-in-out;
+}
+/* footer */
+#footer {
+  height: 100px;
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  border-top: solid 1.5px #1400ff;
+}
+#footer h2 {
+  padding-top: 50px;
+}
+
+@media (max-width:800px) {
+  #footer h2 {
+    font-size: 10px;
+  }
+  
+}
